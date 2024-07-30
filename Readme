@@ -1,0 +1,48 @@
+Projeto Clone do facebook.
+
+Para trabalhar com o framework tailwind.css tem que ter instalado o programa node.js no computador
+
+Para fazer a instalação do tailwind.css siga os passos 
+
+npm install -D tailwindcss
+npx tailwindcss init
+
+colocar o plugin do html como segue documento abaixo em um arquivo tailwind.config.js.
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+Abrir uma pasta chama src/InputDeviceInfo.css e colocar a documentação abaixo
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+Executar esse arquivo para o documento salvar automaticamente 
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+
+
+Abrir uma pasta src/indexedDB.html para o corpo do site conforme segue abaixo 
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+</body>
+</html>
+
+
